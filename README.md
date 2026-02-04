@@ -8,6 +8,10 @@ Just a simple music player with:
 * Seekbar & song duration display
 * Click albums to see tracks
 
+## Live Demo
+
+Check it out here: [Spotify Clone](https://spotify-clone-sage-seven.vercel.app/) 🚀
+
 ## Tech Stack
 
 * React JS
