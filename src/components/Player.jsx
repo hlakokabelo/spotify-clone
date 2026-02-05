@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets, songsData } from '../assets/assets'
 import { usePlayerContext } from '../context/PlayerContext'
+import { formatPadding } from '../util/utils'
 
 const Player = () => {
 
@@ -29,11 +30,11 @@ const Player = () => {
                     <img className='w-4 cursor-pointer' src={assets.loop_icon} alt="" />
                 </div>
                 <div className="flex items-center gap-5">
-                    <p className="">{time.currentTime.minute}:{time.currentTime.second}</p>
+                    <p className="">{formatPadding(time.currentTime.minute)}:{formatPadding(time.currentTime.second)}</p>
                     <div ref={seekBgRef} onClick={seekSong} className="w-[60vw] max-w-125 bg-gray-300 rounded-full cursor-pointer">
                         <hr ref={seekBarRef} className='h-1 border-none w-0 bg-green-800 rounded-full' />
                     </div>
-                    <p>{time.totalTime.minute}:{time.totalTime.second}</p>
+                    <p>{formatPadding(time.totalTime.minute)}:{formatPadding(time.totalTime.second)}</p>
                 </div>
 
 

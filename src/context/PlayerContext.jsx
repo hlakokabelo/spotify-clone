@@ -15,7 +15,7 @@ const PlayerContextProvider = (props) => {
     const [playStatus, setPlayStatus] = useState(false)
     const [time, setTime] = useState({
         currentTime: { second: 0, minute: 0 },
-        totalTime: { second: 0, minute: 0 }
+        totalTime: { second: 28, minute: 3 }
     })
 
     const playSong = () => {
@@ -30,8 +30,7 @@ const PlayerContextProvider = (props) => {
     }
     const playWithId = async (id) => {
         await setTrack(songsData[id])
-        await audioRef.current.play()
-        setPlayStatus(true)
+        await playSong()
     }
 
     const playPreviousSong = async () => {
@@ -66,7 +65,7 @@ const PlayerContextProvider = (props) => {
         playWithId,
         playNextSong, playPreviousSong
     }
-    
+
     useEffect(() => {
         setTimeout(() => {
             audioRef.current.ontimeupdate = () => {
