@@ -10,7 +10,7 @@ Just a simple music player with:
 
 ## Live Demo
 
-Check it out here: [Spotify Clone](https://spotify-clone-sage-seven.vercel.app/) 🚀
+Check it out here: [Spotify Clone](https://lets-spotify.vercel.app/) 🚀
 
 ## Tech Stack
 
